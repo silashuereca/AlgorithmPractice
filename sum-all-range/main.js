@@ -45,6 +45,8 @@
 // console.log(sumAll([20, 6]));
 // Output: 195
 
+//Second Solution
+
 function sumAll(arr) {
 	//find largest number in array
 	let min = Math.min(...arr);
