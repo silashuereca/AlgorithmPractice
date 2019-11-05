@@ -47,20 +47,20 @@
 
 //Second Solution
 
-function sumAll(arr) {
-	//find largest number in array
-	let min = Math.min(...arr);
-	//find smallest number in array
-	let max = Math.max(...arr);
+// function sumAll(arr) {
+// 	//find largest number in array
+// 	let min = Math.min(...arr);
+// 	//find smallest number in array
+// 	let max = Math.max(...arr);
 
-	let sum = 0;
+// 	let sum = 0;
 
-	for (let i = min; i <= max; i++) {
-		sum += i;
-	}
+// 	for (let i = min; i <= max; i++) {
+// 		sum += i;
+// 	}
 
-	return sum;
-}
+// 	return sum;
+// }
 
 // console.log(sumAll([1, 4]));
 // Output: 10
@@ -70,3 +70,14 @@ function sumAll(arr) {
 
 // console.log(sumAll([15, 1]));
 // Output: 120
+
+// Third solution
+function sumAll(arr) {
+	return (Math.abs(Math.max(...arr) - Math.min(...arr) + 1) * (Math.max(...arr) + Math.min(...arr))) / 2;
+}
+
+// console.log(sumAll([5, 1]));
+// Ouput: 15
+
+// console.log(sumAll([4, 1]))
+// Ouput: 10
