@@ -73,11 +73,11 @@
 
 // Third solution
 function sumAll(arr) {
-	return (Math.abs(Math.max(...arr) - Math.min(...arr) + 1) * (Math.max(...arr) + Math.min(...arr))) / 2;
+	let sum = (Math.abs(Math.max(...arr) - Math.min(...arr) + 1) * (Math.max(...arr) + Math.min(...arr))) / 2;
+	return sum;
 }
-
-// console.log(sumAll([5, 1]));
+console.log(sumAll([5, 1]));
 // Ouput: 15
 
-// console.log(sumAll([4, 1]))
+console.log(sumAll([4, 1]));
 // Ouput: 10
