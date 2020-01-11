@@ -14,8 +14,28 @@ one encapsulating array.
  */
 
 function pairElement(str) {
-    return str;
+  const DNA = [];
+  let splitDNA = str.split("");
+
+  for (let value of splitDNA) {
+    switch (value) {
+      case "A":
+        DNA.push(["A", "T"]);
+        break;
+      case "T":
+        DNA.push(["T", "A"])
+        break;
+      case "C":
+        DNA.push(["C", "G"])
+        break;
+      case "G":
+        DNA.push(["G", "C"])
+        break;
+    }
   }
+
+  return DNA;
+}
   
 console.log(pairElement("ATCGA"));
 // output: [["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]]
