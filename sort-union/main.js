@@ -9,8 +9,18 @@ The unique numbers should be sorted by their original order,
 but the final array should not be sorted in numerical order.
 */
 
-function uniteUnique(arr) {
-    return arr;
+function uniteUnique(...arr) {
+    let newArray = [];
+    
+
+    for (let i = 0; i < arr.length; i++){
+        for (let j = 0; j < arr[i].length; j++){
+            newArray.push(arr[i][j]);
+        }
+    }
+    
+    let unique = [...new Set(newArray)];
+    return unique;
 }
   
 console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
