@@ -7,14 +7,18 @@ prime numbers that are less than or equal to num.
 */
 
 function sumPrimes(num) {
-    let primeArray = [];
-    
-
-    for (let i = 2; i <= num; i++){
-       
+    var sieve = [], i, j, primes = [];
+    for (i = 2; i <= num; ++i){
+        if (!sieve[i]) {
+            // i has not been marked -- it is prime
+            primes.push(i)
+            for (j = i << 1; j <= num; j += i){
+                sieve[j] = true
+            }
+        }
     }
 
-    return primeArray;
+    return primes.reduce((a , b) => a + b);
 }
 
 console.log(sumPrimes(10));
