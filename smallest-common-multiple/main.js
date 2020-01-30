@@ -9,8 +9,19 @@ is also evenly divisible by all numbers between 1 and 3. The answer here would b
  */
 
 function smallestCommons(arr) {
-    return arr;
+  let max = Math.max(...arr);
+  let min = Math.min(...arr);
+  // store range of numbers
+  let mltple = max;
+  for(var i = max; i >= min; i--){
+    if(mltple % i !== 0){
+      mltple += max; 
+      i = max
+    } 
   }
+
+  return mltple;
+}
   
   
 console.log(smallestCommons([1, 5]));
