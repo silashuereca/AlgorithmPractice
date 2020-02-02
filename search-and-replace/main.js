@@ -23,7 +23,8 @@ function myReplace(str, before, after) {
     let arrayAfter = after.split("");
     let updateWord = '';
 
-    // check if the first letter of "before" is capitalized or not
+    // check if the first letter of "before" is capitalized or not and if it is then capitalize
+    // the first letter of after variable
     if (regex.test(before)) {
         firstLetter.push(arrayAfter[0].toUpperCase())
         arrayAfter.shift();
